@@ -3,6 +3,7 @@ import Home from './home.jsx';
 import About from './about.jsx';
 import MyDisplayInfo from './MyDisplayInfo.jsx';
 import Employee from './Employee.jsx';
+import Sum from './sum.jsx';
 
 function App() {
   return (
@@ -15,6 +16,4 @@ function App() {
     </>
   );
 }
-
-import Sum from './sum.jsx';
 export default App;
