@@ -9,8 +9,8 @@ function App() {
     <>
       <Home />
       <About />
-      {/* <Employee /> */}
-      {/* <MyDisplayInfo /> */}
+      <Employee />
+      <MyDisplayInfo />
       <Sum />
     </>
   );
