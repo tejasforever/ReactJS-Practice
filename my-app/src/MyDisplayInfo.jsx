@@ -2,10 +2,13 @@ import React from 'react'
 
 export default function MyDisplayInfo() {
     const [data, setData] = React.useState([]);
+    const [count, setCount] = React.useState(0);
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(data => setData(data));
+    React.useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(response => response.json())
+            .then(data => setData(data));
+    }, []);
 
     return (
         <div>
