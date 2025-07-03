@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function MyDisplayInfo() {
     const [data, setData] = React.useState([]);
-    const [count, setCount] = React.useState(0);
+    // const [count, setCount] = React.useState(0);
 
     React.useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -14,11 +14,11 @@ export default function MyDisplayInfo() {
         <div>
             {data.map(item => (
                 <div key={item.id}>
+                    <p>{item.id}</p>
                     <h2>{item.title}</h2>
-                    <p>{item.body}</p>
                     <p>{item.body}</p>
                 </div>
             ))}
         </div>
-    )
+    );
 }
