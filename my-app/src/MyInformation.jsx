@@ -29,7 +29,6 @@ export default function MyInformation() {
                     Female
                 </label>
                 <label>
-                    <Field type="checkbox" name="toggle" />
                     <div role="group" aria-labelledby="checkbox-group">
                         <label>
                             <Field type="checkbox" name="checked" value="One" />
