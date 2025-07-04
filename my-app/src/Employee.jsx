@@ -80,35 +80,30 @@ export default function Employee() {
                 {/* <input
                     type="text"
                     placeholder="First Name"
-                    value={employeeData.firstName}
                     onChange={handleFirstName}
                 /> */}
                 <input
                     type="text"
                     placeholder="First Name"
                     name="firstName"
-                    value={employeeData.firstName}
                     onChange={handleValues}
                 />
                 <input
                     type="text"
                     placeholder="Last Name"
                     name="lastName"
-                    value={employeeData.lastName}
                     onChange={handleValues}
                 />
                 <input
                     type="email"
                     placeholder="Email"
                     name="email"
-                    value={employeeData.email}
                     onChange={handleValues}
                 />
                 <input
                     type="tel"
                     placeholder="Phone"
                     name="phone"
-                    value={employeeData.phone}
                     onChange={handleValues}
                 />
                 <button type="submit">Submit</button>

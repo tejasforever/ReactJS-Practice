@@ -4,15 +4,19 @@ import About from './about.jsx';
 import MyDisplayInfo from './MyDisplayInfo.jsx';
 import Employee from './Employee.jsx';
 import Sum from './sum.jsx';
+import MyInformation from './MyInformation.jsx';
+
 
 function App() {
   return (
     <>
-      <Home />
+    <MyInformation />
+      {/* <Home />
       <About />
       <Employee />
       <MyDisplayInfo />
-      <Sum />
+      <Sum /> */}
+      
     </>
   );
 }

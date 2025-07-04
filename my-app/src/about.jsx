@@ -1,13 +1,16 @@
 import React from 'react';
 
-let number = 1;
-
 export default function About() {
-  number = number + 1;
-  console.log('Current number:', number);
+  const [number, setNumber] = React.useState(0);
+
+  const handleClick = () => {
+    setNumber(number => number + 1);
+  };
+  console.log(number);
   return (
     <div>
       <h2>Number: {number}</h2>
+      <button onClick={handleClick}>Increase</button>
     </div>
   );
 }
