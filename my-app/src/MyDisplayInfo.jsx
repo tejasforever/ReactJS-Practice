@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function MyDisplayInfo() {
     const [data, setData] = React.useState([]);
-    // const [count, setCount] = React.useState(0);
+    const [count, setCount] = React.useState(0);
 
     React.useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
