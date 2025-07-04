@@ -10,12 +10,13 @@ import MyInformation from './MyInformation.jsx';
 function App() {
   return (
     <>
-    <MyInformation />
-      {/* <Home />
+      
+      <Home />
+      <MyInformation />
       <About />
       <Employee />
       <MyDisplayInfo />
-      <Sum /> */}
+      <Sum />
       
     </>
   );
