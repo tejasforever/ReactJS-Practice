@@ -2,7 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import React from 'react'
 import * as Yup from 'yup'
 
-export default function MyInfo() {
+export default function MyInformationExample() {
 
     const validationSchema = (values) =>
     {
@@ -72,7 +72,7 @@ export default function MyInfo() {
 
     return (
         <Formik
-            initialValues={{ firstName: '', lastName: '', email: '', password: '', phone: '', address: '', city: '' }}
+            initialValues={{ firstName: '', lastName: '', email: '', password: '', confirmPassword: '', phone: '', address: '', city: '' }}
             validate={validationSchema}
             onSubmit={values => {
                 // ✅ This will log the form values on submit
@@ -92,17 +92,17 @@ export default function MyInfo() {
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
-                    <Field id="email" name="email" />
+                    <Field id="email" name="email" autoComplete="username"/>
                     <ErrorMessage name="email" component="div" />
                 </div>
                 <div>
                     <label htmlFor="password">Password</label>
-                    <Field id="password" name="password" type="password" />
+                    <Field id="password" name="password" type="password" autoComplete="new-password" />
                     <ErrorMessage name="password" component="div" />
                 </div>
                 <div>
                     <label htmlFor="confirmPassword">Confirm Password</label>
-                    <Field id="confirmPassword" name="confirmPassword" type="password" />
+                    <Field id="confirmPassword" name="confirmPassword" type="password" autoComplete="new-password" />
                     <ErrorMessage name="confirmPassword" component="div" />
                 </div>
                 <div>

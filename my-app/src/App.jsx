@@ -15,7 +15,7 @@ function App() {
       
       {/* <Home /> */}
       {/* <MyInformation /> */}
-      {/* <About /> */}
+      {/* <About /> */}``
       {/* <Employee /> */}
       {/* <MyDisplayInfo /> */}
       {/* <Sum /> */}
