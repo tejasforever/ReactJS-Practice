@@ -8,6 +8,9 @@ import MyInformation from './MyInformation.jsx';
 import MyInfo from './MyInfo.jsx';
 import MyInformationExample from './MyInformationExample.jsx';
 import Information from './information.jsx';
+import DynamicForm from './DynamicForm.jsx';
+import DynamicTicketForm from './DynamicTicketForm.jsx';
+
 
 
 function App() {
@@ -22,8 +25,9 @@ function App() {
       {/* <Sum /> */}
       {/* <MyInfo /> */}
       {/* <MyInformationExample /> */}
-      <Information />
-
+      {/* <Information /> */}
+      {/* <DynamicForm /> */}
+      <DynamicTicketForm />
     </>
   );
 }
