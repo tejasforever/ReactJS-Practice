@@ -11,12 +11,12 @@ function App() {
   return (
     <>
       
-      <Home />
+      {/* <Home /> */}
       <MyInformation />
-      <About />
-      <Employee />
-      <MyDisplayInfo />
-      <Sum />
+      {/* <About /> */}
+      {/* <Employee /> */}
+      {/* <MyDisplayInfo /> */}
+      {/* <Sum /> */}
       
     </>
   );
