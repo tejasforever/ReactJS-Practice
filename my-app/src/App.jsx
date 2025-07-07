@@ -5,6 +5,8 @@ import MyDisplayInfo from './MyDisplayInfo.jsx';
 import Employee from './Employee.jsx';
 import Sum from './sum.jsx';
 import MyInformation from './MyInformation.jsx';
+import MyInfo from './MyInfo.jsx';
+import MyInformationExample from './MyInformationExample.jsx';
 
 
 function App() {
@@ -12,11 +14,13 @@ function App() {
     <>
       
       {/* <Home /> */}
-      <MyInformation />
+      {/* <MyInformation /> */}
       {/* <About /> */}
       {/* <Employee /> */}
       {/* <MyDisplayInfo /> */}
       {/* <Sum /> */}
+      {/* <MyInfo /> */}
+      <MyInformationExample />
       
     </>
   );
