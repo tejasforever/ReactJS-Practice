@@ -7,6 +7,7 @@ import Sum from './sum.jsx';
 import MyInformation from './MyInformation.jsx';
 import MyInfo from './MyInfo.jsx';
 import MyInformationExample from './MyInformationExample.jsx';
+import Information from './information.jsx';
 
 
 function App() {
@@ -20,8 +21,9 @@ function App() {
       {/* <MyDisplayInfo /> */}
       {/* <Sum /> */}
       {/* <MyInfo /> */}
-      <MyInformationExample />
-      
+      {/* <MyInformationExample /> */}
+      <Information />
+
     </>
   );
 }
