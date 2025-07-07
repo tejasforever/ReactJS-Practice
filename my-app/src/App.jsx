@@ -17,17 +17,17 @@ function App() {
   return (
     <>
       
-      {/* <Home /> */}
-      {/* <MyInformation /> */}
-      {/* <About /> */}``
-      {/* <Employee /> */}
-      {/* <MyDisplayInfo /> */}
-      {/* <Sum /> */}
-      {/* <MyInfo /> */}
-      {/* <MyInformationExample /> */}
-      {/* <Information /> */}
-      {/* <DynamicForm /> */}
+      <Home />
+      <MyInformation />
+      <About />
+      <Employee />
+      <Sum />
+      <MyInfo />
+      <MyInformationExample />
+      <Information />
+      <DynamicForm />
       <DynamicTicketForm />
+      <MyDisplayInfo />
     </>
   );
 }

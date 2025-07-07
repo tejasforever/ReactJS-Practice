@@ -70,32 +70,32 @@ export default function DynamicTicketForm() {
                       <h4>Ticket {index + 1}</h4>
                       <div>
                         <label>Name</label>
-                        <Field name={`tickets[${index}].name`} />
+                        <Field id={`name-${index}`} name={`tickets[${index}].name`} />
                         <ErrorMessage name={`tickets[${index}].name`} component="div" style={{ color: 'red' }} />
                       </div>
                       <div>
                         <label>Age</label>
-                        <Field name={`tickets[${index}].age`} />
+                        <Field id={`age-${index}`} name={`tickets[${index}].age`} />
                         <ErrorMessage name={`tickets[${index}].age`} component="div" style={{ color: 'red' }} />
                       </div>
                       <div>
                         <label>Email</label>
-                        <Field name={`tickets[${index}].email`} />
+                        <Field id={`email-${index}`} name={`tickets[${index}].email`} />
                         <ErrorMessage name={`tickets[${index}].email`} component="div" style={{ color: 'red' }} />
                       </div>
                       <div>
                         <label>Phone</label>
-                        <Field name={`tickets[${index}].phone`} />
+                        <Field id={`phone-${index}`} name={`tickets[${index}].phone`} />
                         <ErrorMessage name={`tickets[${index}].phone`} component="div" style={{ color: 'red' }} />
                       </div>
                       <div>
                         <label>Address</label>
-                        <Field name={`tickets[${index}].address`} />
+                        <Field id={`address-${index}`} name={`tickets[${index}].address`} />
                         <ErrorMessage name={`tickets[${index}].address`} component="div" style={{ color: 'red' }} />
                       </div>
                       <div>
                         <label>City</label>
-                        <Field name={`tickets[${index}].city`} />
+                        <Field id={`city-${index}`} name={`tickets[${index}].city`} />
                         <ErrorMessage name={`tickets[${index}].city`} component="div" style={{ color: 'red' }} />
                       </div>
                     </div>
