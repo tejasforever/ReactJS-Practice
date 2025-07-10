@@ -55,6 +55,23 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.product-list
+ {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+.card-container
+ {
+    width: 24%;
+}
+img.card-image {
+    width: 100%;
+    object-fit: contain;
+    height: 400px;
+    background-color: #fff;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -10,6 +10,7 @@ import MyInformationExample from './MyInformationExample.jsx';
 import Information from './information.jsx';
 import DynamicForm from './DynamicForm.jsx';
 import DynamicTicketForm from './DynamicTicketForm.jsx';
+import EmployeeList from './EmployeeList.jsx';
 
 
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       
-      <Home />
+      {/* <Home />
       <MyInformation />
       <About />
       <Employee />
@@ -27,7 +28,8 @@ function App() {
       <Information />
       <DynamicForm />
       <DynamicTicketForm />
-      <MyDisplayInfo />
+      <MyDisplayInfo /> */}
+      <EmployeeList />
     </>
   );
 }
