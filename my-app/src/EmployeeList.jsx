@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function EmployeeList() {
     const [data,setData] = useState([]);
     
-    
+       
     // useEffect(() => {
     //     fetch('https://fakestoreapi.com/products')
     //     .then(response => response.json())
@@ -18,7 +18,12 @@ export default function EmployeeList() {
 
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products")
-        .then((json) => {setData(json.data)});
+        .then((json) => {
+            setData(json.data);
+            console.log(json.data);
+            console.log(json.status);
+            console.log(json.statusText);
+        });
     }, [])
 
   return (
@@ -26,8 +31,8 @@ export default function EmployeeList() {
         {
             data.map((item,index) => (
                 <>  
-                    {/* <Card key={index} data={item} /> */}
-                <CardDestructrProps key={index} data={item} index={index} />
+                <Card key={index} data={item} />
+                {/*<CardDestructrProps key={index} data={item} index={index} /> */}
                 </>
             ))
         }

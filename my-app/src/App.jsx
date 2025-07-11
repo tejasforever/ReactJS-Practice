@@ -11,6 +11,7 @@ import Information from './information.jsx';
 import DynamicForm from './DynamicForm.jsx';
 import DynamicTicketForm from './DynamicTicketForm.jsx';
 import EmployeeList from './EmployeeList.jsx';
+import ToDoList from './ToDoList.jsx';
 
 
 
@@ -28,8 +29,9 @@ function App() {
       <Information />
       <DynamicForm />
       <DynamicTicketForm />
-      <MyDisplayInfo /> */}
-      <EmployeeList />
+      <MyDisplayInfo />
+      <EmployeeList /> */}
+      <ToDoList />
     </>
   );
 }
