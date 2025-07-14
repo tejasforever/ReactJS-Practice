@@ -1,4 +1,5 @@
 import React from 'react'
+import Child3 from './child3'
 
 export default function Child2(props) {
   return (
