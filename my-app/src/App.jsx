@@ -13,6 +13,7 @@ import DynamicTicketForm from './DynamicTicketForm.jsx';
 import EmployeeList from './EmployeeList.jsx';
 import ToDoList from './ToDoList.jsx';
 import RealtimeExample from './RealtimeExample.jsx';
+import MainData from './MainData.jsx';
 
 
 
@@ -32,8 +33,9 @@ function App() {
       <DynamicTicketForm />
       <MyDisplayInfo />
       <EmployeeList />
-      <ToDoList /> */}
-      <RealtimeExample />
+      <ToDoList />
+      <RealtimeExample /> */}
+      <MainData />
     </>
   );
 }
