@@ -14,6 +14,7 @@ import EmployeeList from './EmployeeList.jsx';
 import ToDoList from './ToDoList.jsx';
 import RealtimeExample from './RealtimeExample.jsx';
 import MainData from './MainData.jsx';
+import Layout from './Layout.jsx';
 
 
 
@@ -34,8 +35,9 @@ function App() {
       <MyDisplayInfo />
       <EmployeeList />
       <ToDoList />
-      <RealtimeExample /> */}
-      <MainData />
+      <RealtimeExample /> 
+      <MainData /> */}
+      <Layout />
     </>
   );
 }
