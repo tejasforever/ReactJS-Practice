@@ -38,6 +38,9 @@ return (
             Address: {item.address}
         </div>
         <div>
+            Id: {item.id}
+        </div>
+        <div>
             <button onClick={()=>{
                 deleteInfo(item.id);
             }}>Delete Information</button>
