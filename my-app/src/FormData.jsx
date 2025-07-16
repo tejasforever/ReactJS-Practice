@@ -11,9 +11,16 @@ const LanguageText = {
   },
   hi: {
     firstname: "पहला नाम",
-    lastname: "उपनाम"
+    lastname: "अंतिम नाम"
+  },
+  guj: {
+    firstname: "પ્રથમ નામ",
+    lastname: "છેલ્લું નામ"
   }
 }
+
+console.log(LanguageText);
+
   return (
     <div>
       <form>

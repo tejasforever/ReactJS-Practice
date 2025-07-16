@@ -12,7 +12,8 @@ export default function HeaderData() {
     <div>
       <select onChange={handleLanguageChange}>
         <option value="en">English</option>
-        <option value="hi">Hindi</option>
+        <option value="hi">हिन्दी</option>
+        <option value="guj">ગુજરાતી</option>
       </select>
     </div>
   )
