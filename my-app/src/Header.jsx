@@ -1,15 +1,15 @@
-import React from 'react'
-import LanguageDataContext from './LanguageData/LanguageData'
-
+import * as React from 'react';
+import LanguageDataContext from './LanguageData/LanguageData';
 export default function HeaderData() {
 
   const { lan, setlan } = React.useContext(LanguageDataContext);
-  const handleLanguageChange = (e) => {
-    setlan(e.target.value);
+
+  const handleLanguageChange = (event) => {
+    setlan(event.target.value);
   };
 
   return (
-    <div>
+ <div>
       <select onChange={handleLanguageChange}>
         <option value="en">English</option>
         <option value="hi">हिन्दी</option>

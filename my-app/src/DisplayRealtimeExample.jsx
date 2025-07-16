@@ -1,5 +1,8 @@
 import React, {  useEffect, useState } from 'react';
 import axios from 'axios';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 export default function DisplayRealtimeExample() {
 const [data, setData] = useState([]);
@@ -41,9 +44,11 @@ return (
             Id: {item.id}
         </div>
         <div>
-            <button onClick={()=>{
+           
+            <Button variant="outlined" startIcon={<DeleteIcon />}  onClick={()=>{
                 deleteInfo(item.id);
-            }}>Delete Information</button>
+            }}>Delete Information</Button>
+           
             </div>
     </div>
     ))
