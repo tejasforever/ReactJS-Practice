@@ -36,8 +36,10 @@ function App() {
       <EmployeeList />
       <ToDoList />
       <RealtimeExample /> 
-      <MainData /> */}
-      <Layout />
+      <MainData /> 
+      <Layout /> */}
+      <DynamicTicketForm />
+      <RealtimeExample /> 
     </>
   );
 }
