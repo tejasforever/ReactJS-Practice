@@ -38,7 +38,7 @@ function App() {
       <RealtimeExample /> 
       <MainData /> 
       <Layout /> */}
-      <MyInformation />
+      <Layout />
     </>
   );
 }
