@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 
+
 export default function DisplayRealtimeExample() {
 const [data, setData] = useState([]);
 
@@ -47,7 +48,9 @@ return (
            
             <Button variant="outlined" startIcon={<DeleteIcon />}  onClick={()=>{
                 deleteInfo(item.id);
-            }}>Delete Information</Button>
+            }}>Delete Information </Button>
+
+            
            
             </div>
     </div>
