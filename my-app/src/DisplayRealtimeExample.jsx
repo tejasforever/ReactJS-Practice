@@ -1,24 +1,26 @@
-import React, {  useEffect, useState } from 'react';
+// Component to fetch and display a list of users from a mock API, with delete functionality.
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-
-
 export default function DisplayRealtimeExample() {
-const [data, setData] = useState([]);
+  // State to hold user data from API
+  const [data, setData] = useState([]);
 
-useEffect(() => {
-axios.get('https://6870df9c7ca4d06b34b8714d.mockapi.io/UserInformation')
-.then(data => {
-setData(data.data);
-})
-.catch(error => {
-console.error('Error fetching data:', error);
-});
-}, []);
+  // Fetch user data on component mount
+  useEffect(() => {
+    axios.get('https://6870df9c7ca4d06b34b8714d.mockapi.io/UserInformation')
+      .then(data => {
+        setData(data.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
- const deleteInfo = (id) => {
+  // Delete a user by id and update local state
+  const deleteInfo = (id) => {
     axios.delete(`https://6870df9c7ca4d06b34b8714d.mockapi.io/UserInformation/${id}`)
       .then(() => {
         setData(prevData => prevData.filter(item => item.id !== id));
@@ -28,20 +30,21 @@ console.error('Error fetching data:', error);
       });
   };
 
-return (
-<div>{
-    data.map((item,index) => (
-    <div key={index}>
-        <div>
+  // Render user list with delete button
+  return (
+    <div>
+      {data.map((item, index) => (
+        <div key={index}>
+          <div>
             Name: {item.name}
-        </div>
-        <div>
+          </div>
+          <div>
             Avatar: {item.avatar}
-        </div>
-        <div>
+          </div>
+          <div>
             Address: {item.address}
-        </div>
-        <div>
+          </div>
+          <div>
             Id: {item.id}
         </div>
         <div>

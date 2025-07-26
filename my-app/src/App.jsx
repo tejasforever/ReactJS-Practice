@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       
-      {/* <Home />
+      <Home />
       <MyInformation />
       <About />
       <Employee />
@@ -37,7 +37,6 @@ function App() {
       <ToDoList />
       <RealtimeExample /> 
       <MainData /> 
-      <Layout /> */}
       <Layout />
     </>
   );

@@ -1,35 +1,40 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import React from 'react'
-import * as Yup from 'yup'
+// MyInfo: Formik form with validation for user information.
+// Uses Yup for validation schema. Shows how to use Formik's Form, Field, and ErrorMessage.
+// You can add alternative validation or form handling code below, with comments for reference.
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React from 'react';
+import * as Yup from 'yup';
 
 export default function MyInfo() {
-
+    // Validation schema for the form fields
     const validationSchema = Yup.object({
         firstName: Yup.string().required('Required')
-        .min(2, 'Must be at least 2 characters')
-        .max(50, 'Must be 50 characters or less'),
+            .min(2, 'Must be at least 2 characters')
+            .max(50, 'Must be 50 characters or less'),
         lastName: Yup.string().required('Required')
-        .min(2, 'Must be at least 2 characters')
-        .max(50, 'Must be 50 characters or less'),
+            .min(2, 'Must be at least 2 characters')
+            .max(50, 'Must be 50 characters or less'),
         email: Yup.string().email('Invalid email').required('Required')
-        .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Invalid email format'),
+            .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Invalid email format'),
         password: Yup.string().required('Required')
-        .min(8, 'Must be at least 8 characters')
-        .max(100, 'Must be 100 characters or less'),
+            .min(8, 'Must be at least 8 characters')
+            .max(100, 'Must be 100 characters or less'),
         confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password'), null], 'Passwords must match'),
+            .oneOf([Yup.ref('password'), null], 'Passwords must match'),
         phone: Yup.string().required('Required')
-        // .matches(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number format')
-        .min(10, 'Must be at least 10 characters')
-        .max(15, 'Must be 15 characters or less'),
+            // Alternative: Uncomment the line below to use phone number regex validation
+            // .matches(/^\+?[1-9]\d{1,14}$/, 'Invalid phone number format')
+            .min(10, 'Must be at least 10 characters')
+            .max(15, 'Must be 15 characters or less'),
         address: Yup.string().required('Required')
-        .min(5, 'Must be at least 5 characters')
-        .max(100, 'Must be 100 characters or less'),
+            .min(5, 'Must be at least 5 characters')
+            .max(100, 'Must be 100 characters or less'),
         city: Yup.string().required('Required')
-        .min(2, 'Must be at least 2 characters')
-        .max(50, 'Must be 50 characters or less'),
-    })
+            .min(2, 'Must be at least 2 characters')
+            .max(50, 'Must be 50 characters or less'),
+    });
 
+    // Render the Formik form
     return (
         <Formik
             initialValues={{ firstName: '', lastName: '', email: '', password: '', phone: '', address: '', city: '' }}

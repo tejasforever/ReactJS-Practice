@@ -1,17 +1,22 @@
+// DynamicForm: A dynamic form for adding multiple users using Formik and Yup validation.
+// Allows adding/removing user fields and validates each user's name and email.
 import React, { useState } from 'react';
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 export default function DynamicForm() {
+  // State to show submission status and values (optional)
   const [submitted, setSubmitted] = useState(false);
   const [submittedValues, setSubmittedValues] = useState(null);
 
+  // Initial form values: one user object
   const initialValues = {
     users: [
       { name: '', email: '' }
     ]
   };
 
+  // Validation schema for users array
   const validationSchema = Yup.object({
     users: Yup.array().of(
       Yup.object({
@@ -21,11 +26,13 @@ export default function DynamicForm() {
     )
   });
 
+  // Render the dynamic form
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
+        // Log form data and reset form on submit
         console.log('Form submitted:', values);
         setSubmitted(true);
         setSubmittedValues(values);
@@ -35,6 +42,7 @@ export default function DynamicForm() {
       {({ values }) => (
         <>
           <Form>
+            {/* FieldArray lets you add/remove user fields dynamically */}
             <FieldArray name="users">
               {({ push, remove }) => (
                 <div>

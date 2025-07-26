@@ -1,58 +1,41 @@
+
+// Employee: Employee form for entering and managing a single employee's data.
+// Shows two approaches for handling form state and input changes in React.
+// 1. Dynamic handler (recommended): One function for all fields using the input's name attribute.
+// 2. Single-field handlers (reference): Separate handler for each field (commented for reference).
 import React from 'react';
 
 export default function Employee() {
-    // ❌ Initial state is set as an array containing a single object.
-    //    Since we are only dealing with one employee, there's no need to use an array.
-    // ✅ Best practice: Use an object directly to store a single record's data.
-    const [employeeData, setEmployeeData] = React.useState([
-        {
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-        },
-    ]);
-    // 📝 Currently using an array of objects, but we are only dealing with one employee object.
-    // 👉 Instead of: const [employeeData, setEmployeeData] = useState([{...}])
-    // ✅ Use:        const [employeeData, setEmployeeData] = useState({...})
+    // State for a single employee's data (object, not array)
+    const [employeeData, setEmployeeData] = React.useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+    });
+
 
     // --------------------------------------------------------------------
-    // 🔽 These are individual handler functions for each input field.
-    // 🔍 Purpose: They update the corresponding field in the state one by one.
-    // 🛑 These work but are repetitive and harder to maintain as the form grows.
-    // ✅ It's better to use a shared handler (see `handleValues`) for scalability.
-    
+    // Reference: Manual (single-field) handlers for each form field
+    // Uncomment and use these if you want to handle each field separately.
+    // This approach is useful for learning or for forms with custom logic per field.
+    // Not recommended for large forms due to repetition.
+    //
     // const handleFirstName = (e) => {
-    //     setEmployeeData({
-    //         ...employeeData,
-    //         firstName: e.target.value
-    //     });
-    // }
-
+    //     setEmployeeData({ ...employeeData, firstName: e.target.value });
+    // };
     // const handleLastName = (e) => {
-    //     setEmployeeData({
-    //         ...employeeData,
-    //         lastName: e.target.value
-    //     });
-    // }
-
+    //     setEmployeeData({ ...employeeData, lastName: e.target.value });
+    // };
     // const handleEmail = (e) => {
-    //     setEmployeeData({
-    //         ...employeeData,
-    //         email: e.target.value
-    //     });
-    // }
-
+    //     setEmployeeData({ ...employeeData, email: e.target.value });
+    // };
     // const handlePhone = (e) => {
-    //     setEmployeeData({
-    //         ...employeeData,
-    //         phone: e.target.value
-    //     });
-    // }
+    //     setEmployeeData({ ...employeeData, phone: e.target.value });
+    // };
 
-    // --------------------------------------------------------------------
-    // ✅ handleValues - Single reusable input handler
-    // This dynamic handler updates the correct property in employeeData
+    // --- Recommended: Dynamic handler for all fields ---
+    // This handler updates the correct property in employeeData
     // based on the `name` attribute of the input field.
     const handleValues = (e) => {
         setEmployeeData({
@@ -61,20 +44,22 @@ export default function Employee() {
         });
     };
 
-    // --------------------------------------------------------------------
-    // ✅ handleSubmit - Called when the form is submitted
-    // Prevents the default page reload and logs the employee data to the console
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(employeeData); // for debugging or further processing
+        // Log employee data to console
+        console.log(employeeData);
     };
 
+    // Render the employee form
     return (
         <div>
-            {/* 
+            {/*
                 ✅ Controlled form: Each input's value is linked to React state (employeeData).
                 ✅ Updates are handled through the shared handleValues function.
                 📝 name attributes MUST match the keys in employeeData for the dynamic handler to work.
+                ---
+                Reference: To use single-field handlers, uncomment the relevant handler and onChange below.
             */}
             <form onSubmit={handleSubmit}>
                 {/* <input
@@ -86,24 +71,28 @@ export default function Employee() {
                     type="text"
                     placeholder="First Name"
                     name="firstName"
+                    value={employeeData.firstName}
                     onChange={handleValues}
                 />
                 <input
                     type="text"
                     placeholder="Last Name"
                     name="lastName"
+                    value={employeeData.lastName}
                     onChange={handleValues}
                 />
                 <input
                     type="email"
                     placeholder="Email"
                     name="email"
+                    value={employeeData.email}
                     onChange={handleValues}
                 />
                 <input
                     type="tel"
                     placeholder="Phone"
                     name="phone"
+                    value={employeeData.phone}
                     onChange={handleValues}
                 />
                 <button type="submit">Submit</button>
