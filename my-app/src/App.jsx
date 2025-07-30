@@ -15,14 +15,14 @@ import ToDoList from './ToDoList.jsx';
 import RealtimeExample from './RealtimeExample.jsx';
 import MainData from './MainData.jsx';
 import Layout from './Layout.jsx';
+import MyExample from './MyExample.jsx';
 
 
 
 function App() {
   return (
     <>
-      
-      <Home />
+      {/* <Home /> 
       <MyInformation />
       <About />
       <Employee />
@@ -37,7 +37,8 @@ function App() {
       <ToDoList />
       <RealtimeExample /> 
       <MainData /> 
-      <Layout />
+      <Layout /> */}
+      <MyExample />
     </>
   );
 }
