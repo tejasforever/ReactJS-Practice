@@ -14,8 +14,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    // origin: "http://localhost:5173",
-    origin: "https://jubilant-space-eureka-7vw9vgqgp6j93xwv5-5173.app.github.dev",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
