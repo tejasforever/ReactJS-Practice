@@ -16,12 +16,16 @@ import RealtimeExample from './RealtimeExample.jsx';
 import MainData from './MainData.jsx';
 import Layout from './Layout.jsx';
 import MyExample from './MyExample.jsx';
-
+import ErrorBoundry from './ErrorBoundry.jsx';
+import MyAnothertExample from './MyAnothertExample.jsx';
+import { ErrorBoundry } from 'react-error-boundary';
+import ErrorPage from './ErrorPage.jsx';
 
 
 function App() {
   return (
     <>
+    <ErrorBoundry FallbackComponent={ErrorPage}>
       {/* <Home /> 
       <MyInformation />
       <About />
@@ -37,8 +41,11 @@ function App() {
       <ToDoList />
       <RealtimeExample /> 
       <MainData /> 
-      <Layout /> */}
-      <MyExample />
+      <Layout /> 
+      <MyExample /> */}
+      
+      <MyAnothertExample />
+      </ErrorBoundry>
     </>
   );
 }
