@@ -26,7 +26,7 @@ function App() {
   return (
     <>
     <ErrorBoundry FallbackComponent={ErrorPage}>
-      {/* <Home /> 
+      {/* <Home />
       <MyInformation />
       <About />
       <Employee />

@@ -18,7 +18,7 @@ const TodoList = ({ todos, onEdit, onDelete }) => (
           <ListItem>
             <ListItemText
               primary={todo.title}
-              secondary={todo.description}
+              secondary={`${todo.description} - Created By: ${todo.createdBy}`}
             />
             <IconButton edge="end" onClick={() => onEdit(todo)}>
               <EditIcon />

@@ -39,6 +39,18 @@ const TodoForm = ({ initialValues, onSubmit, onCancel }) => {
           helperText={formik.touched.description && formik.errors.description}
         />
       </Box>
+      <Box mb={2}>
+        <TextField
+          fullWidth
+          label="Created By"
+          name="createdBy"
+          value={formik.values.createdBy}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={formik.touched.createdBy && Boolean(formik.errors.createdBy)}
+          helperText={formik.touched.createdBy && formik.errors.createdBy}
+        />
+      </Box>
       <Button type="submit" variant="contained" color="primary">
         {initialValues.id ? 'Update' : 'Add'}
       </Button>

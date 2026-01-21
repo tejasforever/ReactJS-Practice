@@ -4,7 +4,7 @@ import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import * as api from './api/todoApi';
 
-const defaultForm = { title: '', description: '', id: null };
+const defaultForm = { title: '', description: '', createdBy: '', id: null };
 
 function App() {
   const [todos, setTodos] = useState([]);
