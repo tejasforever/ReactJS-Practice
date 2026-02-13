@@ -44,6 +44,24 @@ function App() {
       <Layout /> 
       <MyExample /> */}
       
+
+      {/* <Home />
+      <MyInformation />
+      <About />
+      <Employee />
+      <Sum />
+      <MyInfo />
+      <MyInformationExample />
+      <Information />
+      <DynamicForm />
+      <DynamicTicketForm />
+      <MyDisplayInfo /> */}
+      <EmployeeList />
+      {/* <ToDoList />
+      <RealtimeExample /> 
+      <MainData /> 
+      <Layout /> 
+      <MyExample /> */}
       <MyAnothertExample />
       </ErrorBoundry>
     </>
