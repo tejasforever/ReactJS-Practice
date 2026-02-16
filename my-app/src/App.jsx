@@ -26,12 +26,12 @@ function App() {
   return (
     <>
     <ErrorBoundry FallbackComponent={ErrorPage}>
-      {/* <Home />
+      <Home />
       <MyInformation />
       <About />
       <Employee />
       <Sum />
-      <MyInfo />
+      {/*<MyInfo />
       <MyInformationExample />
       <Information />
       <DynamicForm />
@@ -42,27 +42,9 @@ function App() {
       <RealtimeExample /> 
       <MainData /> 
       <Layout /> 
-      <MyExample /> */}
+      <MyExample />
+      <MyAnothertExample />*/}
       
-
-      {/* <Home />
-      <MyInformation />
-      <About />
-      <Employee />
-      <Sum />
-      <MyInfo />
-      <MyInformationExample />
-      <Information />
-      <DynamicForm />
-      <DynamicTicketForm />
-      <MyDisplayInfo /> */}
-      <EmployeeList />
-      {/* <ToDoList />
-      <RealtimeExample /> 
-      <MainData /> 
-      <Layout /> 
-      <MyExample /> */}
-      <MyAnothertExample />
       </ErrorBoundry>
     </>
   );

@@ -19,7 +19,7 @@ export default function MyInformation() {
             }}
         >
             {({ values, setFieldValue }) => (
-                <Form>
+                <Form className="d-flex flex-wrap flex-column align-content-start">
                     {/* Text input for first name */}
                     <Field name="firstName" placeholder="First Name" />
                     {/* Text input for last name */}
@@ -60,7 +60,7 @@ export default function MyInformation() {
                                 }}
                                 name="checked"
                                 value="One"
-                                inputProps={{ 'aria-label': 'One' }}
+                                slotProps={{ 'aria-label': 'One' }}
                             />
                             One
                             {/* Checkbox for 'Two' */}
@@ -75,7 +75,7 @@ export default function MyInformation() {
                                 }}
                                 name="checked"
                                 value="Two"
-                                inputProps={{ 'aria-label': 'Two' }}
+                                slotProps={{ 'aria-label': 'Two' }}
                             />
                             Two
                             {/* Checkbox for 'Three' */}
